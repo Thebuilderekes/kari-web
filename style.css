@@ -56,18 +56,28 @@ body {
 
 @font-face {
   font-family: 'Inter', sans-serif;
-  src: url(./assets/fonts/Archivo_Black\,Inter/Inter/Inter-VariableFont_opsz,wght.ttf);
+  src: url(./assets/fonts/Archivo_Black\,Inter/Inter/Inter-VariableFont_opsz,wght.ttf) format(ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Archivo_Black', sans-serif;
-  src: url(./assets/fonts/Archivo_Black\,Inter/Archivo_Black/ArchivoBlack-Regular.ttf);
+  src: url(./assets/fonts/Archivo_Black\,Inter/Archivo_Black/ArchivoBlack-Regular.ttf) format(ttf);
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
+  font-family: 'Inter', sans-serif;
   background: var(--light-grey);
   position: relative;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Archivo_Black', sans-serif; */
+}
+
+h2 {
+  font-family: 'Archivo_Black', sans-serif;
+  font-weight: bold;
 }
 
 footer {
@@ -276,7 +286,6 @@ nav ul li a {
   }
 
   .card h2 {
-    /* font-family: "Archivo_Black", sans-serif; */
     position: absolute;
     margin-top: var(--spacing-150);
     text-transform: uppercase;
@@ -337,6 +346,7 @@ nav ul li a {
   }
 
   .about h2 {
+    /* font-family: 'Archivo_Black', sans-serif; */
     font-size: var(--fs-48);
     color: var(--dark-grey);
   }
