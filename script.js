@@ -1,12 +1,12 @@
 const navList = document.querySelector("nav ul");
 const navToggleBtn = document.querySelector(".nav-toggler");
 
-navToggleBtn.addEventListener("click", function () {
+navToggleBtn.addEventListener("click", function() {
   if (navToggleBtn.classList.contains("nav-toggler")) {
     const isOpen = navToggleBtn.getAttribute("aria-expanded") === "true";
     navToggleBtn.setAttribute("aria-expanded", !isOpen);
   }
-
+  console.log("click");
   if (navList.classList.contains("show")) {
     navList.classList.remove("show");
     navList.classList.add("hide");
