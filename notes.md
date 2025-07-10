@@ -1,0 +1,1 @@
+-  Remove key frames CSS from style.css2 if you are not going to use it
