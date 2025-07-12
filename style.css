@@ -7,7 +7,7 @@
 }
 
 :root {
-  --light-grey: #e3dddd;
+  --light-grey: #ededed;
   --darker-grey: #2e2d2d;
   --dark-grey: #929090;
   --mid-dark-grey: #b3b2b2;
@@ -164,7 +164,7 @@ header {
   justify-content: space-between;
   align-items: center;
   border-radius: 30px;
-  margin: var(--spacing-20) var(--spacing-30);
+  margin: var(--spacing-20) var(--spacing-20);
   padding: var(--spacing-10) var(--spacing-20);
   z-index: 999;
 }
@@ -265,40 +265,56 @@ nav ul li a {
 
 @media (min-width: 48em) {
   .nav-container {
+    padding: var(--spacing-10) var(--spacing-20);
     background: var(--dark-grey);
-    position: sticky;
-  }
-
-  .nav-container .nav-toggler {
-    display: none;
   }
 
   .nav-toggler {
-    display: block;
-  }
-
-  nav ul {
-    position: static;
-    padding: 0;
-    margin: 0;
-    background: transparent;
-    list-style-type: '';
-    display: flex;
-    justify-content: space-between;
-    transform: translateX(0);
-    /* Initially off-screen */
-    gap: 1rem;
+    display: none;
   }
 
   nav ul .close-nav-btn {
     display: none;
   }
+}
+
+
+nav ul {
+  position: static;
+  margin: 0;
+  background: transparent;
+  list-style-type: '';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(0);
+  /* Initially off-screen */
+  gap: 1rem;
+}
+
+
+nav ul li a {
+  color: var(--light-grey);
+  font-size: var(--fs-18);
+}
+
+@media (min-width: 48em) {
+  nav ul {
+    flex-direction: row;
+  }
 
   nav ul li a {
     color: var(--primary);
-    font-size: var(--fs-18);
   }
+
+  nav ul li a:hover {
+    color: var(--light-grey);
+  }
+
+
 }
+
+
 
 /*Hero section styles*/
 
@@ -523,11 +539,12 @@ nav ul li a {
     width: 500px;
     height: 200px;
   }
+
+  .selected-works article .description {
+    width: 50%;
+  }
 }
 
-.selected-works article .description {
-  width: 40%;
-}
 
 /*Footer styles*/
 
@@ -593,8 +610,8 @@ footer .email-link-container a.email-link:hover {
 }
 
 footer .email-link-container a.email-link img {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 @media (min-width: 48em) {
