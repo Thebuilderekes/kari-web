@@ -18,19 +18,19 @@
       <button type="button" aria-expanded="false" aria-controls="main-nav" class="nav-toggler">
         Menu
       </button>
-      <nav class="main-nav" id="main-nav" aria-label="main">
+      <nav class="main-nav" id="main-nav" aria-label="main-nav">
         <ul class="nav-list">
+          <button type="button" aria-expanded="true" aria-controls="main-nav" class="close-nav-btn">
+            X
+          </button>
           <li>
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">Home1</a>
           </li>
           <li>
             <a class="nav-link" href="./index2.html">Home2</a>
           </li>
           <li>
-            <a class="nav-link" href="/index3.html">Home3</a>
-          </li>
-          <li>
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="#about">About</a>
           </li>
           <li>
             <a class="nav-link" href="#selected-works">Works</a>
@@ -68,7 +68,7 @@
         <p>Client Logo</p>
       </div>
     </div>
-    <section class="about section">
+    <section class="about section" id="about">
       <h2 class="section-heading">About</h2>
       <div class="center-content">
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni eaque dicta hic nesciunt numquam eveniet
@@ -87,11 +87,13 @@
       </div>
     </section>
 
-    <section class="selected-works section" id="selected-works section">
+    <section class="selected-works section" id="selected-works">
       <h2>Selected works</h2>
       <article>
-        <div class="placeholder">
+        <div class="placeholder d-flex-col">
           <div class="placeholder-img display-content-center" aria-labelledby="project1">
+          </div>
+          <div class="d-flex">
             <div class="box1 box">
             </div>
             <div class="box">
@@ -102,7 +104,6 @@
             </div>
             <div class="box">
             </div>
-
           </div>
         </div>
         <div class="description">
@@ -112,9 +113,10 @@
         </div>
       </article>
       <article>
-        <div class="placeholder">
+        <div class="placeholder d-flex-col">
           <div class="placeholder-img display-content-center" aria-labelledby="project2">
-
+          </div>
+          <div class="d-flex">
             <div class="box1 box">
             </div>
             <div class="box">
@@ -134,10 +136,11 @@
         </div>
       </article>
       <article>
-        <div class="placeholder">
-          <div class="placeholder-img display-content-center" aria-labelledby="project3">
+        <div class="placeholder d-flex-col">
+          <div class="placeholder-img" aria-labelledby="project3">
+          </div>
+          <div class="d-flex">
             <div class="box1 box">
-
             </div>
             <div class="box">
             </div>
@@ -149,6 +152,7 @@
             </div>
           </div>
         </div>
+
         <div class="description">
           <h3 id="project3">Project name</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas fuga quasi totam quos accusamus minus
@@ -167,8 +171,10 @@
       <div class="email-link-container">
         <a class="email-link" href=""> Email <img class="arrow" src="img/diagonal-arrow.png" alt=""></a>
       </div>
-      <dl class="social-media-links">
-        <dt>Social media</dt>
+      <dl>
+        <dt>
+          <h3> Social media </h3>
+        </dt>
         <dd>
           <a href="">Instagram</a>
         </dd>
@@ -180,7 +186,6 @@
         </dd>
       </dl>
     </footer>
-
     <script src="script.js"></script>
 </body>
 
