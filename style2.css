@@ -336,7 +336,8 @@ nav ul .close-nav-btn {
 .hero__container h2 span {
   font-size: 13px;
   padding: var(--spacing-10) var(--spacing-20);
-  background: green;
+  background: var(--primary);
+  letter-spacing: 2px;
   color: var(--light-grey);
   border-radius: 50px;
 }
