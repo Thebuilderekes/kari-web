@@ -88,7 +88,6 @@ body {
 h1,
 h2 {
   font-family: 'Archivo_Black', sans-serif;
-  text-transform: uppercase;
   font-weight: bold;
 }
 
@@ -554,17 +553,32 @@ footer {
   font-family: 'Archivo_Black', sans-serif;
   padding: var(--spacing-50) var(--spacing-30);
   background: var(--primary);
-  display: flex;
-  flex-direction: column;
   gap: var(--spacing-30);
   color: var(--light-grey);
 }
 
+footer h2 {
+  color: var(--mid-dark-grey);
+  font-size: var(--fs-30);
+  margin-bottom: var(--spacing-50);
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-30);
+
+}
+
 @media (min-width: 48em) {
-  footer {
+  .contact__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  footer h2 {
+    font-size: var(--fs-40);
   }
 }
 
@@ -579,11 +593,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer h2,
+h3 {
+  font-weight: 400;
+}
+
 footer h3,
 a.email-link {
   color: var(--mid-dark-grey);
-  font-weight: 700;
   font-size: var(--fs-30);
+  font-family: 'Inter', sans-serif;
+
 }
 
 dd {
