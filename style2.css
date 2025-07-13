@@ -18,6 +18,8 @@
   --spacing-30: 30px;
   --spacing-40: 40px;
   --spacing-50: 50px;
+  --spacing-60: 60px;
+  --spacing-70: 70px;
 
 
 
@@ -120,11 +122,12 @@ header {
 
 
 .section {
-  padding: var(--spacing-50) var(--spacing-30);
+  padding: var(--spacing-70) var(--spacing-30);
 }
 
 .section h2 {
   color: var(--dark-grey);
+  margin-bottom: var(--spacing-20);
   font-size: var(--fs-40);
 }
 
@@ -177,8 +180,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-20) var(--spacing-10);
-  margin: 0 var(--spacing-30);
+  margin: var(--spacing-20) var(--spacing-30);
+  padding-bottom: var(--spacing-10);
   z-index: 9999;
 }
 
@@ -276,10 +279,6 @@ nav ul .close-nav-btn {
 
 
 @media (min-width: 48em) {
-  .nav-container {
-    margin: var(--spacing-20) var(--spacing-30);
-  }
-
 
   .nav-container .nav-toggler {
     display: none;
