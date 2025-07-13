@@ -528,7 +528,6 @@ footer a:hover {
 footer h3,
 a.email-link {
   color: var(--mid-dark-grey);
-  text-transform: uppercase;
   font-weight: 700;
   font-size: var(--fs-30);
 }
