@@ -500,6 +500,9 @@ nav ul li a {
   margin: var(--spacing-50) 0;
 }
 
+.selected-works article h3 {
+font-weight: 700;
+}
 
 .selected-works article .description {
   width: 100%;
