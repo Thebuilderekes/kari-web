@@ -81,8 +81,7 @@ body {
   /* font-family: 'Archivo_Black', sans-serif; */
 }
 
-h1,
-h2 {
+h1{
   font-family: 'Archivo_Black', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
@@ -125,6 +124,7 @@ header {
 
 .section h2 {
   color: var(--dark-grey);
+	text-transform: uppercase;
   font-size: var(--fs-40);
 }
 
@@ -177,8 +177,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-20) var(--spacing-10);
-  margin: 0 var(--spacing-30);
+  margin: var(--spacing-20) var(--spacing-30);
+	padding-bottom: var(--spacing-20);
   z-index: 9999;
 }
 
@@ -276,10 +276,6 @@ nav ul .close-nav-btn {
 
 
 @media (min-width: 48em) {
-  .nav-container {
-    margin: var(--spacing-20) var(--spacing-30);
-  }
-
 
   .nav-container .nav-toggler {
     display: none;
@@ -331,6 +327,7 @@ nav ul .close-nav-btn {
   align-items: start;
   font-size: var(--fs-30);
   margin-bottom: var(--spacing-20);
+	text-transform: uppercase;
 }
 
 .hero__container h2 span {
@@ -458,6 +455,12 @@ nav ul .close-nav-btn {
   height: 150px;
 }
 
+
+.selected-works h3 {
+	font-weight: 700;	
+
+
+}
 .selected-works .box {
   background: var(--mid-dark-grey);
   border: 1px solid var(--dark-grey);
@@ -499,19 +502,35 @@ footer {
   position: static;
   top: 100vh;
   font-family: 'Archivo_Black', sans-serif;
-  padding: var(--spacing-40) var(--spacing-30);
+  padding: var(--spacing-50) var(--spacing-30);
   background: var(--primary);
-  display: flex;
-  flex-direction: column;
   gap: var(--spacing-30);
   color: var(--light-grey);
 }
 
+footer h2 {
+  color: var(--mid-dark-grey);
+  font-size: var(--fs-30);
+  text-transform: Capitalise;
+  margin-bottom: var(--spacing-50);
+}
+
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-30);
+
+}
+
 @media (min-width: 48em) {
-  footer {
+  .contact__container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+  }
+
+  footer h2 {
+    font-size: var(--fs-40);
   }
 }
 
@@ -526,15 +545,22 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer h2,
+h3 {
+  font-weight: 400;
+}
+
 footer h3,
 a.email-link {
   color: var(--mid-dark-grey);
-  font-weight: 700;
   font-size: var(--fs-30);
+  font-family: 'Inter', sans-serif;
+
 }
 
 dd {
   padding: var(--spacing-10) 0;
+
 }
 
 footer .contact-number {
@@ -566,6 +592,6 @@ footer .email-link-container a.email-link img {
 
   footer .email-link-container a.email-link {
     font-size: var(--fs-80);
-
   }
+
 }
