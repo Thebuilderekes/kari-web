@@ -644,17 +644,19 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer h2,
-h3 {
+footer h2 {
   font-weight: 400;
 }
 
-footer h3,
-a.email-link {
+footer a.email-link {
   color: var(--mid-dark-grey);
   font-size: var(--fs-30);
   font-family: 'Inter', sans-serif;
 
+}
+
+footer dt {
+  font-size: var(--fs-31);
 }
 
 dd {
@@ -685,7 +687,7 @@ footer .email-link-container a.email-link img {
 }
 
 @media (min-width: 48em) {
-  footer h3 {
+  footer dt {
     font-size: var(--fs-48);
   }
 
