@@ -280,6 +280,7 @@ nav ul li {
 nav ul li a {
   color: var(--light-grey);
   font-size: var(--fs-18);
+  transition: 0.3s all ease-in-out;
 }
 
 nav ul li a:hover {
