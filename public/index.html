@@ -4,11 +4,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/style1.css" />
+  <link rel="stylesheet" href="/css/style1.css" media="print" onload="this.media='all'" />
   <title>Karipre Ubanye - Architect</title>
+  <style>
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #ccc;
+      border-top-color: #333;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
   <header>
     <div class="nav-container">
       <div class="logo-container">
@@ -214,6 +246,14 @@
         </dl>
       </div>
     </footer>
+    <script>
+      window.addEventListener('load', function () {
+        const loader = document.getElementById('loader');
+        const content = document.getElementById('content');
+        loader.style.display = 'none';
+        content.style.display = 'block';
+      });
+    </script>
     <script type="module" src="/js/script.js"></script>
 </body>
 
