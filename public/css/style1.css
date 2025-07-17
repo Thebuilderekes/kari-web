@@ -53,6 +53,9 @@
   /*18px*/
   --fs-default: 1rem;
   /*16px*/
+  --fs-15: 0.9375rem;
+  /*15px*/
+
 }
 
 html,
@@ -91,7 +94,6 @@ h2 {
   font-weight: bold;
 }
 
-
 .d-flex {
   display: flex;
   justify-content: center;
@@ -102,7 +104,6 @@ h2 {
   flex-direction: column;
   align-items: center;
 }
-
 
 header {
   display: flex;
@@ -125,19 +126,17 @@ header {
   }
 
   p {
-    font-size: 15px;
+    font-size: var(--fs-15);
   }
-
 }
 
 @media (min-width: 48em) {
-
   .section h2 {
     font-size: var(--fs-64);
   }
 
   p {
-    font-size: 15px;
+    font-size: var(--fs-15);
   }
 
 }
@@ -203,8 +202,13 @@ header {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-50) 0;
   position: absolute;
   background: var(--primary);
+  width: 100%;
   height: 100%;
   list-style: none;
   top: 0;
@@ -226,12 +230,13 @@ nav {
 
 }
 
-nav ul .close-nav-btn {
-  font-size: var(--fs-24);
+nav .close-nav-btn {
+  font-size: var(--fs-32);
+  margin: var(--spacing-50) 0;
   color: var(--light-grey);
   background: none;
   border: none;
-  padding: var(--spacing-5) var(--spacing-10);
+  padding: var(--spacing-20) var(--spacing-50);
   display: block;
 }
 
@@ -242,22 +247,6 @@ nav ul li {
 nav ul li a {
   color: var(--light-grey);
   font-size: var(--fs-18);
-}
-
-@media (max-width: 47em) {
-  nav.show {
-    animation: slide-in 0.3s ease-in forwards;
-    width: 300px;
-  }
-
-  nav.hide {
-    animation: slide-out 0.3s ease-in forwards;
-  }
-
-  nav ul {
-    padding: var(--spacing-20);
-  }
-
 }
 
 
@@ -271,7 +260,7 @@ nav ul li a {
     display: none;
   }
 
-  nav ul .close-nav-btn {
+  nav .close-nav-btn {
     display: none;
   }
 }
@@ -285,10 +274,27 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   transform: translateX(0);
   /* Initially off-screen */
   gap: 1rem;
 }
+
+@media (max-width: 47em) {
+  nav.show {
+    animation: slide-in 0.3s ease-in forwards;
+  }
+
+  nav.hide {
+    animation: slide-out 0.3s ease-in forwards;
+  }
+
+  nav ul {
+    padding: var(--spacing-20);
+  }
+
+}
+
 
 
 nav ul li a {
@@ -441,7 +447,6 @@ nav ul li a {
 .about {
   background: var(--primary);
   color: var(--mid-dark-grey);
-  z-index: 9999;
 }
 
 
@@ -501,7 +506,7 @@ nav ul li a {
 }
 
 .selected-works article h3 {
-font-weight: 700;
+  font-weight: 700;
 }
 
 .selected-works article .description {
