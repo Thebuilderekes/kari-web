@@ -63,14 +63,14 @@ body {
 
 @font-face {
   font-family: "Inter", sans-serif;
-  src: url(./assets/fonts/Archivo_Black\,Inter/Inter/Inter-VariableFont_opsz,wght.ttf) format(ttf);
+  src: url(./assets/fonts/Archivo_Black\,Inter/Inter/Inter-VariableFont_opsz,wght.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Archivo_Black", sans-serif;
-  src: url(./assets/fonts/Archivo_Black\,Inter/Archivo_Black/ArchivoBlack-Regular.ttf) format(ttf);
+  font-family: "Archivo Black", sans-serif;
+  src: url(./assets/fonts/Archivo_Black\,Inter/Archivo_Black/ArchivoBlack-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
@@ -85,7 +85,7 @@ body {
 }
 
 h1 {
-  font-family: "Archivo_Black", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -110,6 +110,26 @@ header {
   align-items: center;
 }
 
+.fade-in-el {
+  opacity: 0;
+  transform: translateY(20px);
+  /* Slightly move the element down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-el {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Add animation when the element is in view */
+.fade-in-el.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 47em) {
   .d-flex-col {
     display: flex;
@@ -122,6 +142,7 @@ header {
 }
 
 .section h2 {
+  font-family: "Archivo Black", sans-serif;
   color: var(--dark-grey);
   text-transform: uppercase;
   margin-bottom: var(--spacing-20);
@@ -187,6 +208,32 @@ header {
   100% {
     transform: translateX(100%);
     /* Off-screen to the right */
+  }
+}
+
+/* Fade & slide from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade & slide from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -264,13 +311,32 @@ nav ul li {
   padding: 1rem 0;
 }
 
-nav ul li a {
+.nav-link.animate-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+.nav-link.animate-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+.nav-link {
+  opacity: 0;
   color: var(--light-grey);
-  font-size: var(--fs-18);
+  font-weight: 700;
+  font-size: var(--fs-40);
   transition: 0.3s all ease-in-out;
 }
 
-nav ul li a:hover {
+@media (min-width: 48em) {
+  .nav-link {
+    transition: 0.3s all ease-in-out;
+    opacity: 1;
+    font-size: var(--fs-18);
+    font-weight: normal;
+  }
+}
+
+.nav-link:hover {
   color: var(--light-grey);
 }
 
@@ -283,6 +349,7 @@ nav .close-nav-btn {
   border: none;
   display: block;
 }
+
 
 @media (min-width: 48em) {
   .nav-container .nav-toggler {
@@ -297,12 +364,12 @@ nav .close-nav-btn {
     display: none;
   }
 
-  nav ul li a {
+  .nav-link {
     color: var(--primary);
     font-size: var(--fs-18);
   }
 
-  nav ul li a:hover {
+  .nav-link:hover {
     color: var(--dark-grey);
   }
 }
@@ -453,7 +520,7 @@ nav .close-nav-btn {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-20);
-  margin: var(--spacing-50) 0;
+  margin: var(--spacing-70) 0;
 }
 
 .selected-works article h3 {
@@ -544,7 +611,7 @@ nav .close-nav-btn {
 footer {
   position: static;
   top: 100vh;
-  font-family: "Archivo_Black", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   padding: var(--spacing-50) var(--spacing-30);
   background: var(--primary);
   gap: var(--spacing-30);
@@ -554,7 +621,6 @@ footer {
 footer h2 {
   color: var(--mid-dark-grey);
   font-size: var(--fs-30);
-  text-transform: Capitalise;
   margin-bottom: var(--spacing-50);
 }
 

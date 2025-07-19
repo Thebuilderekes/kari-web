@@ -108,6 +108,27 @@ header {
   justify-content: center;
 }
 
+.fade-in-el {
+  opacity: 0;
+  transform: translateY(20px);
+  /* Slightly move the element down */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-el {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* Add animation when the element is in view */
+.fade-in-el.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .section {
   padding: var(--spacing-70) var(--spacing-30);
 }
@@ -220,6 +241,32 @@ nav .close-nav-btn {
   }
 }
 
+/* Fade & slide from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade & slide from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 nav {
   display: flex;
   flex-direction: column;
@@ -259,15 +306,48 @@ nav ul {
   gap: 1rem;
 }
 
+@media (min-width: 48em) {
+  nav ul {
+    flex-direction: row;
+  }
+
+}
+
 nav ul li {
   padding: 1rem 0;
 }
 
-nav ul li a {
-  color: var(--light-grey);
-  font-size: var(--fs-18);
-  transition: 0.3s all ease-in-out;
+.nav-link.animate-left {
+  animation: slideInLeft 0.5s forwards;
 }
+
+.nav-link.animate-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+
+.nav-link {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  color: var(--light-grey);
+  font-weight: 700;
+  font-size: var(--fs-40);
+}
+
+@media (min-width: 48em) {
+  .nav-link {
+    opacity: 1;
+    transition: 0.3s all ease-in-out;
+    color: var(--primary);
+    font-size: var(--fs-18);
+    font-weight: normal;
+  }
+
+  .nav-link:hover {
+    color: var(--light-grey);
+  }
+}
+
 
 @media (max-width: 47em) {
   nav.show {
@@ -283,40 +363,23 @@ nav ul li a {
   }
 }
 
-nav ul li a {
-  color: var(--light-grey);
-  font-size: var(--fs-18);
-}
 
-@media (min-width: 48em) {
-  nav ul {
-    flex-direction: row;
-  }
-
-  nav ul li a {
-    color: var(--primary);
-  }
-
-  nav ul li a:hover {
-    color: var(--light-grey);
-  }
-}
 
 /*Hero section styles*/
 
 .rounded-heading__container {
   position: absolute;
+  z-index: 30;
   top: -70px;
   left: -100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 300px;
   height: 300px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: var(--primary);
   clip-path: circle(50% at 50% 50%);
-  z-index: 30;
 }
 
 .rounded-heading__container h1 {
@@ -498,7 +561,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-20);
-  margin: var(--spacing-50) 0;
+  margin: var(--spacing-70) 0;
 }
 
 .selected-works article h3 {
