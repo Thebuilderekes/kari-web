@@ -55,7 +55,6 @@
   /*16px*/
   --fs-15: 0.9375rem;
   /*15px*/
-
 }
 
 html,
@@ -66,23 +65,22 @@ body {
   min-height: 100vh;
 }
 
-
 @font-face {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   src: url(./assets/fonts/Archivo_Black\,Inter/Inter/Inter-VariableFont_opsz,wght.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Archivo_Black', sans-serif;
+  font-family: "Archivo_Black", sans-serif;
   src: url(./assets/fonts/Archivo_Black\,Inter/Archivo_Black/ArchivoBlack-Regular.ttf);
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background: var(--light-grey);
   position: relative;
   overflow-x: hidden;
@@ -90,7 +88,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Archivo_Black', sans-serif;
+  font-family: "Archivo_Black", sans-serif;
   font-weight: bold;
 }
 
@@ -138,20 +136,16 @@ header {
   p {
     font-size: var(--fs-15);
   }
-
 }
 
 @media (min-width: 48em) {
-
   .section h2 {
     font-size: var(--fs-96);
   }
-
 }
 
 .logo-container {
   width: 100%;
-
 }
 
 .logo {
@@ -178,7 +172,6 @@ header {
   background: var(--primary);
   border-radius: var(--spacing-30);
   padding: var(--spacing-5) var(--spacing-10);
-
 }
 
 nav .close-nav-btn {
@@ -191,9 +184,7 @@ nav .close-nav-btn {
   display: block;
 }
 
-
 @media (min-width: 48em) {
-
   .nav-toggler {
     display: none;
   }
@@ -202,7 +193,6 @@ nav .close-nav-btn {
     display: none;
   }
 }
-
 
 /*Navigation animation*/
 
@@ -248,21 +238,18 @@ nav {
 }
 
 @media (min-width: 48em) {
-
   nav {
     position: inherit;
     transform: translateX(0);
     background: transparent;
-
   }
-
 }
 
 nav ul {
   position: static;
   margin: 0;
   background: transparent;
-  list-style-type: '';
+  list-style-type: "";
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -271,7 +258,6 @@ nav ul {
   /* Initially off-screen */
   gap: 1rem;
 }
-
 
 nav ul li {
   padding: 1rem 0;
@@ -295,10 +281,7 @@ nav ul li a {
   nav ul {
     padding: var(--spacing-20);
   }
-
 }
-
-
 
 nav ul li a {
   color: var(--light-grey);
@@ -317,11 +300,7 @@ nav ul li a {
   nav ul li a:hover {
     color: var(--light-grey);
   }
-
-
 }
-
-
 
 /*Hero section styles*/
 
@@ -363,7 +342,6 @@ nav ul li a {
     margin-top: var(--spacing-50);
     margin-left: var(--spacing-90);
   }
-
 }
 
 .hero-card {
@@ -379,7 +357,6 @@ nav ul li a {
   position: relative;
   z-index: 500;
 }
-
 
 .hero-card__photo-container .hero-card__photo {
   height: 400px;
@@ -400,12 +377,12 @@ nav ul li a {
   opacity: 1;
   transform: translateY(20px);
   /* Adjust the distance as needed */
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
 }
 
 @media (min-width: 48em) {
-
   .hero-card h2 {
     font-size: var(--fs-112);
   }
@@ -447,11 +424,31 @@ nav ul li a {
 
 /*About section styles*/
 
+.center-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+
 .about {
   background: var(--primary);
   color: var(--mid-dark-grey);
 }
 
+.about a {
+  background: var(--dark-grey);
+  color: var(--primary);
+  padding: var(--spacing-10) var(--spacing-20);
+  transition: 0.3s all ease-in-out;
+
+}
+
+.about a:hover {
+  background: var(--darker-grey);
+  color: var(--light-grey);
+}
 
 .about p {
   color: var(--mid-dark-grey);
@@ -459,12 +456,9 @@ nav ul li a {
   line-height: 1.5;
 }
 
+
+
 @media (min-width: 48em) {
-  .center-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .about p {
     font-size: var(--fs-18);
@@ -491,7 +485,6 @@ nav ul li a {
 @media (min-width: 48em) {
   .stats__container p {
     font-size: var(--fs-32);
-
   }
 }
 
@@ -539,11 +532,9 @@ nav ul li a {
 }
 
 @media (min-width: 48em) {
-
   .main-image-container {
     width: 400px;
     height: 400px;
-
   }
 }
 
@@ -593,15 +584,12 @@ nav ul li a {
   border-radius: 4px;
 }
 
-
-
-
 /*Footer styles*/
 
 footer {
   position: static;
   top: 100vh;
-  font-family: 'Archivo_Black', sans-serif;
+  font-family: "Archivo_Black", sans-serif;
   padding: var(--spacing-50) var(--spacing-30);
   background: var(--primary);
   gap: var(--spacing-30);
@@ -618,7 +606,6 @@ footer h2 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-30);
-
 }
 
 @media (min-width: 48em) {
@@ -651,17 +638,16 @@ footer h2 {
 footer a.email-link {
   color: var(--mid-dark-grey);
   font-size: var(--fs-30);
-  font-family: 'Inter', sans-serif;
-
+  font-family: "Inter", sans-serif;
 }
 
 footer dt {
+  color: var(--mid-dark-grey);
   font-size: var(--fs-31);
 }
 
 dd {
   padding: var(--spacing-10) 0;
-
 }
 
 footer .contact-number {
@@ -670,7 +656,7 @@ footer .contact-number {
 
 footer .email-link-container a.email-link {
   display: flex;
-  align-items: start;
+  /*align-items: start;*/
   gap: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -682,8 +668,8 @@ footer .email-link-container a.email-link:hover {
 }
 
 footer .email-link-container a.email-link img {
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 
 @media (min-width: 48em) {
@@ -694,5 +680,4 @@ footer .email-link-container a.email-link img {
   footer .email-link-container a.email-link {
     font-size: var(--fs-80);
   }
-
 }
