@@ -8,6 +8,7 @@
 
 :root {
   --light-grey: #ededed;
+  --lighter-grey: #e8e8e8;
   --darker-grey: #2e2d2d;
   --dark-grey: #929090;
   --mid-dark-grey: #b3b2b2;
@@ -452,14 +453,14 @@ nav ul li {
 }
 
 .logo-slider {
+  background: var(--lighter-grey);
   overflow: hidden;
-  background: var(--mid-dark-grey);
   width: 100%;
 }
 
 .logo-track {
   display: flex;
-  padding: var(--spacing-10) 0;
+  padding: var(--spacing-30) 0;
   width: 100%;
   /* 8 logos, adjust accordingly */
   animation: scroll-left 10s linear infinite;
