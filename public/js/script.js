@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+  const body = document.querySelector("body");
   const nav = document.querySelector("nav");
   const navLinks = document.querySelectorAll("nav ul li a");
   const navToggleBtn = document.querySelector(".nav-toggler");
@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       nav.classList.remove("hide");
       nav.classList.add("show");
+      body.classList.add("overflow")
       navLinks.forEach((link, index) => {
         // Remove any previous animations
         link.classList.remove("animate-left", "animate-right");
@@ -59,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   navMobileToggleBtn.addEventListener("click", function() {
     nav.classList.remove("show");
     nav.classList.add("hide");
+    body.classList.remove("overflow")
     navLinks.forEach(link => {
       link.classList.remove("animate-left", "animate-right");
     });
@@ -75,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.innerWidth < 768) {
         nav.classList.remove("show");
         nav.classList.add("hide");
+        body.classList.remove("overflow")
         navToggleBtn.setAttribute("aria-expanded", false);
         navMobileToggleBtn.setAttribute("aria-expanded", false);
       }
