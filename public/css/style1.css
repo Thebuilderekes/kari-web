@@ -118,7 +118,9 @@ header {
   opacity: 0;
   transform: translateY(20px);
   /* Slightly move the element down */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -133,7 +135,6 @@ header {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .section {
   padding: var(--spacing-70) var(--spacing-30);
@@ -273,7 +274,6 @@ nav .close-nav-btn {
   }
 }
 
-
 nav {
   transform: translateX(0);
 }
@@ -286,7 +286,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--spacing-50) 0;
+    padding: var(--spacing-30) 0;
     top: 0;
     left: 0;
     right: 0;
@@ -316,7 +316,6 @@ nav ul {
     background: transparent;
     flex-direction: row;
   }
-
 }
 
 nav ul li {
@@ -331,10 +330,11 @@ nav ul li {
   animation: slideInRight 0.5s forwards;
 }
 
-
 .nav-link {
   opacity: 0;
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
   color: var(--light-grey);
   font-weight: 700;
   font-size: var(--fs-40);
@@ -354,7 +354,6 @@ nav ul li {
   }
 }
 
-
 @media (max-width: 47em) {
   nav.show {
     animation: slide-in 0.3s ease-in forwards;
@@ -368,8 +367,6 @@ nav ul li {
     padding: var(--spacing-20);
   }
 }
-
-
 
 /*Hero section styles*/
 
@@ -500,7 +497,6 @@ nav ul li {
   align-items: center;
 }
 
-
 .about {
   background: var(--primary);
   color: var(--mid-dark-grey);
@@ -511,7 +507,6 @@ nav ul li {
   color: var(--primary);
   padding: var(--spacing-10) var(--spacing-20);
   transition: 0.3s all ease-in-out;
-
 }
 
 .about a:hover {
@@ -525,10 +520,7 @@ nav ul li {
   line-height: 1.5;
 }
 
-
-
 @media (min-width: 48em) {
-
   .about p {
     font-size: var(--fs-18);
     width: 60%;
