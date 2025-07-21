@@ -651,7 +651,7 @@ footer {
   position: static;
   top: 100vh;
   font-family: "Archivo_Black", sans-serif;
-  padding: var(--spacing-50) var(--spacing-30);
+  padding: var(--spacing-70) var(--spacing-30);
   background: var(--primary);
   gap: var(--spacing-30);
   color: var(--light-grey);
